@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
-import ListSeat from '../listSeats';
-import dataMock from '../../constants/mockData.json';
+import PropTypes from 'prop-types';
+import RoomSeats from './roomSeats';
+import { MAX_SEAT_USER_CAN_BOOK, ERROR_MESSAGES } from '../../constants';
+import Header from '../../common/header';
+import { updateStatusSeats, getSizeSeatsBook, updateUserSeatsBooked } from '../../ulti';
 
-import './App.css';
-
+import './App.scss';
 
 /**
  * Init data.
@@ -20,9 +22,10 @@ function initUserBookedList(data) {
 }
 
 function App(props) {
-  const typeSeat = dataMock.type;
-  const statusList = dataMock.statusList;
-  const [userBookList, setUserBookList] = useState(() => initUserBookedList(dataMock.userBooked));
+  const { filmDetails, typeSeats, statusList, userBooked } = props.data;
+  const [statusSeats, setStatusSeats] = useState(statusList);
+  const [userBookList, setUserBookList] = useState(() => initUserBookedList(userBooked));
+  const [error, setError] = useState('');
 
   /**
    * Change status of seat when user click on checkbox.
@@ -30,31 +33,40 @@ function App(props) {
    * @param {number} col index col.
    */
   function onChangeCheckbox(row, col) {
-    const listCol = new Set([...userBookList[row] || []]);
-    // if the seat is already booked before, then remove it like cancel book.
-    if (listCol.has(col)) {
-      listCol.delete(col);
-
-    } else {
-      listCol.add(col);
+    // if number of seats user have book equal to max, and user check a seat that available.
+    // should display error.
+    if (getSizeSeatsBook(userBookList) === MAX_SEAT_USER_CAN_BOOK && !statusSeats[row][col]) {
+      setError(ERROR_MESSAGES.MAX_SEATS);
+      return;
     }
-    const newUserBookList = {...userBookList};
-    newUserBookList[row] = listCol;
+    const newStatusSeat = updateStatusSeats(statusSeats, {row, col});
+    const newUserBookList = updateUserSeatsBooked(userBookList, {row, col});
+
     setUserBookList(newUserBookList);
+    setStatusSeats(newStatusSeat);
+    setError('');
   }
+
   return (
     <div className="App">
-      { typeSeat.map((type, idx) => (
-        <ListSeat
-          key={idx}
-          typeSeat={type}
-          onChangeCheckbox={(colIdx) => onChangeCheckbox(idx, colIdx)}
-          userBookList={userBookList[idx] || new Set()}
-          rowId={idx}
-          statusRow={statusList[idx]} />))
-      }
+      <Header filmName={filmDetails.name} note={filmDetails.note} />
+      <RoomSeats
+        seats={typeSeats}
+        onChangeCheckbox={onChangeCheckbox}
+        userBookList={userBookList}
+        statusSeats={statusSeats}
+      />
+      <div className="screen-note">
+        <div className="left-note">sss</div>
+        <div className="right-note">bbbbbbbbbbbbbb</div>
+      </div>
+      <div className="error-message">{error}</div>
     </div>
   );
 }
+
+App.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default App;

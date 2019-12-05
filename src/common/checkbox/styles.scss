@@ -3,19 +3,19 @@
   input {
     display: none;
     &:checked + .label-checkbox {
-      background-color: red;
+      background-color: white;
     }
     &:disabled + .label-checkbox {
-      background-color: blue;
+      background-color: #3b3232;
       cursor: not-allowed;
     }
   }
   .label-checkbox {
     width: 30px;
     height: 30px;
-    border-radius: 3px;
+    border-radius: 10px;
     border: 1px solid;
-    margin: 5px;
+    margin: 2px;
     text-align: center;
     vertical-align: middle;
     font-size: 20px;
@@ -23,7 +23,7 @@
     &:hover {
       cursor: pointer;
     }
-    color: white;
+    color: black;
   }
   .vip-seat-checkbox {
     border-color: green;

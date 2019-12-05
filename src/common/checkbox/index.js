@@ -5,7 +5,7 @@ import { TYPE_SEATS } from '../../constants';
 import './styles.scss';
 
 function Checkbox(props) {
-  const { id, onChange, status, seatNumber, type, disabled } = props;
+  const { id, onChange, status, type, disabled, seatNumber } = props;
 
   const typeSeatClassName =
     type === TYPE_SEATS.VIP.key ? 'vip-seat-checkbox'
@@ -13,16 +13,16 @@ function Checkbox(props) {
                                  : 'standard-seat-checkbox';
   return <div className="checkbox-comp">
     <input id={id} type="checkbox" onChange={onChange} checked={status} disabled={disabled} />
-    <label htmlFor={id} className={`label-checkbox ${typeSeatClassName}`}>{status && seatNumber}</label>
+    <label htmlFor={id} className={`label-checkbox ${typeSeatClassName}`}>{seatNumber}</label>
   </div>
 }
 
 Checkbox.propTypes = {
-  seatNumber: PropTypes.number,
   status: PropTypes.bool,
   id: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   type: PropTypes.number.isRequired,
+  seatNumber: PropTypes.number,
 };
 Checkbox.defaultProps = {
   seatNumber: '',

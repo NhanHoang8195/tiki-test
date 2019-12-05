@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  color: white;
+  .seat-comp {
+    .row-label {
+      color: white;
+      width: 20px;
+      margin-right: 10px;
+    }
+  }
+  .error-message {
+    color: red;
+    font-size: 20px;
+  }
+}
