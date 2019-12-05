@@ -5,14 +5,16 @@ import RowSeats from './rowSeats';
 function RoomSeats(props) {
   const { seats, onChangeCheckbox, userBookList, statusSeats } = props;
   return (<div className="screen-seats">
-    {seats.map((type, idx) => (
-      <RowSeats
-        key={idx}
-        typeSeat={type}
-        onChangeCheckbox={(colIdx) => onChangeCheckbox(idx, colIdx)}
-        userBookList={userBookList[idx] || new Set()}
-        rowId={idx}
-        statusRow={statusSeats[idx]} />))}
+    <div className="screen-list">
+      {seats.map((row, idx) => (
+        <RowSeats
+          key={idx}
+          rowTypeSeat={row}
+          onChangeCheckbox={(colIdx) => onChangeCheckbox(idx, colIdx)}
+          userBookList={userBookList[idx] || new Set()}
+          rowId={idx}
+          statusRow={statusSeats[idx]} />))}
+    </div>
   </div>);
 }
 

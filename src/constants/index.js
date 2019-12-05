@@ -1,4 +1,5 @@
 export const TYPE_SEATS = {
+  NONE: {key: -1, value: 'Standard'},
   STANDARD: {key: 0, value: 'Standard'},
   VIP: {key: 1, value: 'VIP'},
   DELUXE: {key: 2, value: 'Deluxe'},

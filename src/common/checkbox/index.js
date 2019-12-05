@@ -4,13 +4,17 @@ import { TYPE_SEATS } from '../../constants';
 
 import './styles.scss';
 
+function getClassName(type) {
+  return type === TYPE_SEATS.VIP.key ? 'vip-seat-checkbox'
+    : type === TYPE_SEATS.DELUXE.key ? 'deluxe-seat-checkbox'
+    : type === TYPE_SEATS.STANDARD.key ? 'standard-seat-checkbox'
+      : 'unknown-seat';
+}
+
 function Checkbox(props) {
   const { id, onChange, status, type, disabled, seatNumber } = props;
 
-  const typeSeatClassName =
-    type === TYPE_SEATS.VIP.key ? 'vip-seat-checkbox'
-    : type === TYPE_SEATS.DELUXE.key ? 'deluxe-seat-checkbox'
-                                 : 'standard-seat-checkbox';
+  const typeSeatClassName = getClassName(type);
   return <div className="checkbox-comp">
     <input id={id} type="checkbox" onChange={onChange} checked={status} disabled={disabled} />
     <label htmlFor={id} className={`label-checkbox ${typeSeatClassName}`}>{seatNumber}</label>

@@ -1,11 +1,18 @@
 .App {
   text-align: center;
   color: white;
-  .seat-comp {
-    .row-label {
-      color: white;
-      width: 20px;
-      margin-right: 10px;
+  .screen-seats {
+    display: flex;
+    justify-content: center;
+    .screen-list {
+      text-align: left;
+      .seat-comp {
+        .row-label {
+          color: white;
+          width: 20px;
+          margin-right: 10px;
+        }
+      }
     }
   }
   .error-message {
