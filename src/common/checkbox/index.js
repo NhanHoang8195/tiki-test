@@ -5,9 +5,9 @@ import { TYPE_SEATS } from '../../constants';
 import './styles.scss';
 
 function getClassName(type) {
-  return type === TYPE_SEATS.VIP.key ? 'vip-seat-checkbox'
+  return type === TYPE_SEATS.STANDARD.key ? 'standard-seat-checkbox'
+    : type === TYPE_SEATS.VIP.key ? 'vip-seat-checkbox'
     : type === TYPE_SEATS.DELUXE.key ? 'deluxe-seat-checkbox'
-    : type === TYPE_SEATS.STANDARD.key ? 'standard-seat-checkbox'
       : 'unknown-seat';
 }
 

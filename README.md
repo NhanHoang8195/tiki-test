@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Setup and run TIKI-TEST app
 
-After clone this repo to your local machine, do following steps to run this app:
+After clone this repo to your local machine, do following steps to run this app:   
 Run command:
 1. ###`cd tiki-test`
 2. ###`npm install`

@@ -16,9 +16,9 @@ export const NOTES_TITLES = {
   right: ['Standard - 60.000đ', 'VIP- 90.000đ', 'Deluxe- 110.000đ']
 };
 
-export const NOTES_MAPPING_CLASS = {
+export const STYLES = {
 
-};
+}
 
 export const KEYS_MAP = {
   "0": "A",
