@@ -20,11 +20,15 @@ Structure for this project.
 src/   
   ├──common/  
   |    ├──checkbox/   
-  |    |      ├──index.js   
-  |    |      └──styles.scss   
+  |    |     ├──__tests__/   
+  |    |     |     └──index.test.js   
+  |    |     ├──index.js   
+  |    |     └──styles.scss   
   |    ├──header/   
-  |    |      ├──index.js   
-  |    |      └──styles.scss   
+  |    |     ├──__tests__/   
+  |    |     |     └──index.test.js   
+  |    |     ├──index.js   
+  |    |     └──styles.scss   
   |    └──noteElement/   
   |           ├──index.js   
   |           └──styles.scss   
