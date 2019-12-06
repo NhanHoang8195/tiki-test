@@ -11,6 +11,15 @@ export const ERROR_MESSAGES = {
   MAX_SEATS: 'You can choose max 6 seats position',
 };
 
+export const NOTES_TITLES = {
+  left: ['Đã đặt', 'Đang chọn'],
+  right: ['Standard - 60.000đ', 'VIP- 90.000đ', 'Deluxe- 110.000đ']
+};
+
+export const NOTES_MAPPING_CLASS = {
+
+};
+
 export const KEYS_MAP = {
   "0": "A",
   "1": "B",

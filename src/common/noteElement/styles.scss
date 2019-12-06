@@ -1,0 +1,11 @@
+.note-type {
+  padding: 5px;
+  &:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: '';
+    display: inline-block;
+    margin-right: 10px;
+  }
+}

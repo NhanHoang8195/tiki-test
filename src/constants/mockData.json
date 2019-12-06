@@ -13,19 +13,19 @@
     [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
   ],
   "statusList": [
-    [true, false, false, true, true, false, true, true, false, true, false, false],
-    [true, false, true, true, true, false, true, true, false, true, false, false, false, false],
-    [false, false, false, true, true, false, true, true, false, true, false, false, false],
-    [true, false, false, true, true, false, true, true, false, true, false, false],
-    [true, false, false, true, true, false, true, true, false, true, false, false, false],
-    [true, false, false, true, true, false, true, true, false, true, false, false, false],
-    [true, false, false, true, true, false, true, true, false, true, false, false, false],
-    [true, false, false, true, true, false, true, true, false, true, false, false, false],
-    [true, false, false, true, true, false, true, true, false, true, false, false, false],
-    [false, false, false, true, true, false, true, true, false, true, false],
-    [true, false, false, true, true, false, true, true, false, true, false]
+    [false, false, false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, false, false, false, false, false, false, false],
+    [false, false, false, false, false, false, true, false, false, false, false, false, false],
+    [true, false, false, true, true, true, true, true, true, true, true, false, false],
+    [false, false, false, false, false, false, true, true, true, true, false, false, false],
+    [false, false, false, true, true, true, true, true, true, true, true, true, false],
+    [false, false, false, false, false, true, true, true, false, false, false],
+    [false, false, false, false, false, true, true, false, false, false, false]
   ],
-  "userBooked": {"1": [0, 2, 3], "3": [3]},
+  "userBooked": {"6": [3, 4]},
   "filmDetails": {
     "name": "Spider-man: Người nhện xa nhà",
     "note": "C13 | 2D Vietnam sub"

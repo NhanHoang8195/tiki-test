@@ -1,12 +1,14 @@
+@import '../../styles';
+
 .checkbox-comp {
   display: inline-block;
   input {
     display: none;
     &:checked + .label-checkbox {
-      background-color: white;
+      background-color: $white;
     }
     &:disabled + .label-checkbox {
-      background-color: #3b3232;
+      background-color: $color_dune;
       cursor: not-allowed;
     }
   }
@@ -23,16 +25,16 @@
     &:hover {
       cursor: pointer;
     }
-    color: black;
+    color: $black;
   }
   .vip-seat-checkbox {
-    border-color: green;
+    border-color: $green;
   }
   .deluxe-seat-checkbox {
-    border-color: blue;
+    border-color: $blue;
   }
   .standard-seat-checkbox {
-    border-color: white;
+    border-color: $white;
   }
   .unknown-seat {
     visibility: hidden;

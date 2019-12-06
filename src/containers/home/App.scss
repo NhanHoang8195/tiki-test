@@ -1,22 +1,62 @@
+@import '../../styles';
+
 .App {
   text-align: center;
-  color: white;
+  color: $white;
   .screen-seats {
     display: flex;
     justify-content: center;
+    text-align: left;
     .screen-list {
-      text-align: left;
-      .seat-comp {
-        .row-label {
-          color: white;
-          width: 20px;
-          margin-right: 10px;
+      .row-list {
+        .seat-comp {
+          .row-label {
+            color: $white;
+            width: 20px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .note-seats {
+        display: flex;
+        text-align: left;
+        margin-top: 30px;
+        font-size: 18px;
+        .note-left {
+          margin-right: 30px;
+          .note-left-0 {
+            &:before {
+              background-color: $color_dune;
+            }
+          }
+          .note-left-1 {
+            &:before {
+              background-color: $white;
+            }
+          }
+        }
+        .note-right {
+          .note-right-0 {
+            &:before {
+              border: 1px solid $white;
+            }
+          }
+          .note-right-1 {
+            &:before {
+              border: 1px solid $green;
+            }
+          }
+          .note-right-2 {
+            &:before {
+              border: 1px solid $blue;
+            }
+          }
         }
       }
     }
   }
   .error-message {
-    color: red;
+    color: $red;
     font-size: 20px;
   }
 }

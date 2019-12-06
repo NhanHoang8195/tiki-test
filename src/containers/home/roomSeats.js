@@ -1,19 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import RowSeats from './rowSeats';
+import Node from './note';
 
 function RoomSeats(props) {
   const { seats, onChangeCheckbox, userBookList, statusSeats } = props;
   return (<div className="screen-seats">
     <div className="screen-list">
-      {seats.map((row, idx) => (
-        <RowSeats
-          key={idx}
-          rowTypeSeat={row}
-          onChangeCheckbox={(colIdx) => onChangeCheckbox(idx, colIdx)}
-          userBookList={userBookList[idx] || new Set()}
-          rowId={idx}
-          statusRow={statusSeats[idx]} />))}
+      <div className="row-list">
+        {seats.map((row, idx) => (
+          <RowSeats
+            key={idx}
+            rowTypeSeat={row}
+            onChangeCheckbox={(colIdx) => onChangeCheckbox(idx, colIdx)}
+            userBookList={userBookList[idx] || new Set()}
+            rowId={idx}
+            statusRow={statusSeats[idx]} />))}
+      </div>
+      <Node />
     </div>
   </div>);
 }
