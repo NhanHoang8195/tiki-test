@@ -4,15 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 After clone this repo to your local machine, do following steps to run this app:   
 Run command:
-1. ###`cd tiki-test`
-2. ###`npm install`
-3. ###`npm start`
+1. ### `cd tiki-test`
+2. ### `npm install`
+3. ### `npm start`
 
 After finished all of the commands above, you can open any browsers and   
 access to `http://localhost:3000` to book a ticket of cinema.
 
-You can review quickly with review throw these files in order:   
-index.js => containers/home/App.js.
+You can review quickly throught these files in order:   
+src/index.js => src/containers/home/App.js.
 
 Structure for this project.   
 
