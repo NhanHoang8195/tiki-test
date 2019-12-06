@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import RoomSeats from './roomSeats';
 import { MAX_SEAT_USER_CAN_BOOK, ERROR_MESSAGES } from '../../constants';
 import Header from '../../common/header';
-import Node from './note';
 import { updateStatusSeats, getSizeSeatsBook, updateUserSeatsBooked } from '../../ulti';
 
 import './App.scss';
